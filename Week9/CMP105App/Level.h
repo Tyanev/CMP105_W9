@@ -4,6 +4,9 @@
 #include "Framework/Input.h"
 #include <string>
 #include <iostream>
+#include "BeachBallManager.h"
+#include "FallingBallManager.h"
+#include "Player.h"
 
 
 class Level{
@@ -21,6 +24,14 @@ private:
 	void endDraw();
 
 	// Default variables for level class.
+	std::string count;
+
 	sf::RenderWindow* window;
 	Input* input;
+
+	Player player;
+	sf::Font font;
+	sf::Text entityCount;
+	BeachBallManager manager;
+	FallingBallManager fallingManager;
 };
